@@ -88,7 +88,7 @@ public class PhotosService
             HttpGet httpGet = new HttpGet(uriBuilder.build());
             iCloudService.populateRequestHeadersParameters(httpGet);
 
-            //TODO, it wil fail due to "java.net.UnknownHostException: p55-photosws.icloud.com"
+            //TODO, it will fail due to "java.net.UnknownHostException: p55-photosws.icloud.com"
             // PyIcloud reimplemented PhotosService to use the new ckdatabasews back-end in 2017.
             // We can do it later.
             String rawResponse = iCloudService.getHttpClient().execute(httpGet, new StringResponseHandler());
