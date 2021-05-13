@@ -232,8 +232,16 @@ public class IdmsaService
         request.setHeader("Referer", idmsaEndPoint + "/");
         request.setHeader("User-Agent", "Mozilla/5.0 (iPad; CPU OS 9_3_4 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13G35 Safari/601.1");
 
-        // Seems to be required to get a session token
-        request.setHeader("X-Apple-Widget-Key", "83545bf919730e51dbfba24e7e8a78d2");
+        request.setHeader("Accept", "*/*");
+        request.setHeader("Content-Type", "application/json");
+        request.setHeader("X-Apple-OAuth-Client-Id", "d39ba9916b7251055b22c7f910e2ea796ee65e98b2ddecea8f5dde8d9d1a815d");
+        request.setHeader("X-Apple-OAuth-Client-Type", "firstPartyAuth");
+        request.setHeader("X-Apple-OAuth-Redirect-URI", "https://www.icloud.com");
+        request.setHeader("X-Apple-OAuth-Require-Grant-Code", "true");
+        request.setHeader("X-Apple-OAuth-Response-Mode", "web_message");
+        request.setHeader("X-Apple-OAuth-Response-Type", "code");
+//        request.setHeader("X-Apple-OAuth-State", clientId); // seems not to be useful anymore?
+        request.setHeader("X-Apple-Widget-Key", "d39ba9916b7251055b22c7f910e2ea796ee65e98b2ddecea8f5dde8d9d1a815d");
 
         if (!Strings.isNullOrEmpty(appleIdSessionId))
         {

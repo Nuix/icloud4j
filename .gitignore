@@ -1,8 +1,12 @@
 /.gradle
 /build
+/.idea/codeStyles
+/.idea/modules
 /.idea/workspace.xml
 /.idea/libraries
 /.idea/gradle.xml
+/.idea/sonarIssues.xml
 /.idea/uiDesigner.xml
 /icloud4j.iws
+/icloud4j.iml
 /gradle.properties
